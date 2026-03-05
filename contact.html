@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - My Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <!-- Retro Pixel Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="index.html" class="navbar-logo"><img src="img/logo.png" alt="Logo" class="logo-img" /></a>
+        <button class="navbar-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <ul class="navbar-menu">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="projects.html">PROJECTS</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>        <span class="navbar-phone"></span>      </div>
+    </nav>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contact">
+      <div class="contact-container">
+        <div class="contact-left">
+          <div class="contact-title">
+            <h2>SEND A MESSAGE!</h2>
+            <div class="contact-line"></div>
+          </div>
+          
+          <!-- Formspree contact form -->
+          <form action="https://formspree.io/f/{form_id}" method="post" class="contact-form">
+            <input 
+              type="email" 
+              name="email" 
+              placeholder="YOUR EMAIL" 
+              class="input-field" 
+              required
+            />
+            <textarea 
+              name="message" 
+              placeholder="YOUR MESSAGE" 
+              class="input-field textarea-field" 
+              required
+            ></textarea>
+            <button type="submit" class="btn-submit">
+              SEND MESSAGE →
+            </button>
+          </form>
+        </div>
+
+        <div class="contact-right">
+          <div class="contact-box">
+            <h3>📧 EMAIL</h3>
+            <p>jorneyglaze@email.com</p>
+          </div>
+          <div class="contact-box">
+            <h3>📱 SOCIAL</h3>
+            <div class="social-links">
+              <a href="https://www.facebook.com/ragen666" class="social-link" onclick="confirmRedirect(event, 'Facebook')">Facebook</a>
+              <a href="#" class="social-link" onclick="confirmRedirect(event, 'Twitter')">Twitter</a>
+              <a href="https://www.instagram.com/__jorgens__" class="social-link" onclick="confirmRedirect(event, 'Instagram')">Instagram</a>
+              <a href="#" class="social-link" onclick="confirmRedirect(event, 'LinkedIn')">LinkedIn</a>
+            </div>
+          </div>
+          <div class="contact-box">
+            <h3>📍 LOCATION</h3>
+            <p>Your City, Country</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>© 2026 SBT Internship Portfolio</p>
+      <div class="footer-contact">
+        <p>📞 0961-175-3945 | ✉️ jorneyglaze@gmail.com</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

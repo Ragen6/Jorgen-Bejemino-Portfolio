@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - My Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <!-- Retro Pixel Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+        <h2>Resume Image (Click to Open)</h2>
+    <div class="pixel-frame-large" onclick="testOpenModal()">
+      <img src="img/resume.jpg" alt="My Resume" />
+    </div>
+    <style>
+      /* ensure resume frame styling even if external CSS load is delayed */
+      .pixel-frame-large {
+        width: 300px;
+        height: 400px;
+        border: 6px solid #00f5ff;
+        box-shadow: 0 0 30px rgba(0, 245, 255, 0.8), inset 0 0 20px rgba(0, 245, 255, 0.2);
+        position: relative;
+        overflow: hidden;
+        margin: 20px auto;
+      }
+      .pixel-frame-large img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="index.html" class="navbar-logo"><img src="img/logo.png" alt="Logo" class="logo-img" /></a>
+        <button class="navbar-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <ul class="navbar-menu">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="projects.html">PROJECTS</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ABOUT SECTION -->
+    <section class="about" id="about">
+      <div class="about-container">
+        <div class="section-title">
+          <h1>/// ABOUT ME ///</h1>
+          <div class="title-line"></div>
+        </div>
+        
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              I love to bring new ideas and perspectives to every project I work on.
+            </p>
+            <p>
+              I believe in making the web more colorful, fun, and accessible. My journey in tech has been filled with exciting projects that blend creativity with technical excellence.
+            </p>
+            <p>
+              With a strong background in web development and UI/UX design, I'm committed to delivering high-quality solutions that not only look amazing but also provide excellent user experiences. I love learning new technologies and pushing the boundaries of what's possible on the web.
+            </p>
+            <div class="skills-grid">
+              <div class="skill-box">
+                <div class="skill-icon">🤖</div>
+                <span>Machine Learning</span>
+              </div>
+              <div class="skill-box">
+                <div class="skill-icon">🐍</div>
+                <span>PYTHON</span>
+              </div>
+              <div class="skill-box">
+                <div class="skill-icon">💻</div>
+                <span>HTML/CSS/JAVASCRIPT</span>
+              </div>
+              <div class="skill-box">
+                <div class="skill-icon">🐘</div>
+                <span>PostgreSQL</span>
+              </div>
+              <div class="skill-box">
+                <div class="skill-icon">🎨</div>
+                <span>FIGMA</span>
+              </div>
+              <div class="skill-box">
+                <div class="skill-icon">♾️</div>
+                <span>AGILE</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-image">
+            <div class="about-image">
+            <div class="pixel-frame-large" onclick="testOpenModal()">
+      <img src="img/resume.jpg" alt="My Resume" />
+    </div>
+            <button id="resumeButton" style="margin-top: 20px; padding: 10px 20px; background: #ffbe0b; color: #000; border: 2px solid #ffbe0b; cursor: var(--cursor-click); font-weight: bold; font-family: 'Orbitron', sans-serif;">📌 VIEW FULL RESUME</button>
+          </div>
+          <!-- verification helpers imported from VERIFICATION.html -->
+          <script>
+            // Logging helpers copied from verification page
+            function addLog(message, type = 'info') {
+              console.log(message);
+            }
+            function clearLogs() {
+              console.clear();
+            }
+
+            // test open/close functions (calls existing modal API)
+            function testOpenModal() {
+              addLog('→ testOpenModal() fired');
+              openResumeModal();
+            }
+            function testCloseModal() {
+              addLog('→ testCloseModal() fired');
+              closeResumeModal();
+            }
+          </script>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>© 2026 SBT Internship Portfolio</p>
+      <div class="footer-contact">
+        <p>📞 0961-175-3945 | ✉️ jorneyglaze@gmail.com</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    
+    <!-- Resume Modal -->
+    <div id="resumeModal" class="resume-modal">
+      <div class="resume-modal-content">
+        <button class="resume-modal-close" onclick="closeResumeModal()">&times;</button>
+        <img src="img/resume.jpg" alt="My Resume" />
+      </div>
+    </div>
+  </body>
+</html>
